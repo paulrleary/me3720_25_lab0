@@ -1,0 +1,3 @@
+# Lab 0
+
+The goal of this lab is to...
