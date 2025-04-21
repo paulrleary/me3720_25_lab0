@@ -22,16 +22,16 @@ cd ~/Desktop
 ```
 
 Then use the tool git to clone this repo:
-'''
+```
 git clone https://github.com/paulrleary/me3720_25_lab0.git
-'''
+```
 
 Then cd into the the cloned folder:
-'''
+```
 cd me3720_25_lab0
-'''
+```
 
 And finally launch VSCode:
-'''
+```
 code .
-'''
+```
