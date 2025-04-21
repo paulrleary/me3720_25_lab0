@@ -17,9 +17,9 @@ For the tasks above, when you feel you have a solution, please save your plots, 
 # Getting started.
 
 First clone this repo.  in AWS open a terminal window and cd to the desktop:
-'''
+```
 cd ~/Desktop
-'''
+```
 
 Then use the tool git to clone this repo:
 '''
