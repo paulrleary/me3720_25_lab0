@@ -115,15 +115,14 @@ ax.set_ylabel("Y-axis")
 ax.set_title("Real-time Plot")
 
 with holoocean.make(scenario_cfg=scenario) as env:
+    simul_state = env.tick()
     while True:
         if 'q' in pressed_keys:
             break
+
+        # probably best to comment out the parse_keys call when running your own code, or you may find confusing behavior.
         command = parse_keys(pressed_keys, force) # command is a numpy array of length 8, corresponding to the vehicle's 8 thrusters.  thruster values are in Newtons
         print(command)
-
-        #send to holoocean
-        env.act("auv0", command)
-        simul_state = env.tick()
         
         auv_state = get_states_6dof(simul_state["DynamicsSensor"])
         
@@ -131,11 +130,14 @@ with holoocean.make(scenario_cfg=scenario) as env:
         # print(st) #uncomment to view the states of the vehicle
 
         #INSERT HERE:
-        # try driving the vehicle forward 30 meters, then backward 30 meters, by "hard coding" the thruster command here. 
+        # try driving the vehicle forward 30 meters, then backward 30 meters, by "hard coding" the thruster command here, using information from the vehicle state. 
         # you will probably need a set of conditional statements, like if, elif, else, or switch case.
 
         #looking at the plots, and your starting position and orientation, in what directions does do the positive axes of this coordinate system point?
 
+        #send to holoocean
+        env.act("auv0", command)
+        simul_state = env.tick()
         x_data.append(st[0])
         y_data.append(st[1])
 
