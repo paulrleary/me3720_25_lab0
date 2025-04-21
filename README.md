@@ -13,3 +13,25 @@ The other tasks are within the script hoveringauv_depth_yaw_ctl.py, and are done
 The end state should be the vehicle hovering in place at the desired depth and heading.
 
 For the tasks above, when you feel you have a solution, please save your plots, and hand them in with your inserted control block.  
+
+# Getting started.
+
+First clone this repo.  in AWS open a terminal window and cd to the desktop:
+'''
+cd ~/Desktop
+'''
+
+Then use the tool git to clone this repo:
+'''
+git clone https://github.com/paulrleary/me3720_25_lab0.git
+'''
+
+Then cd into the the cloned folder:
+'''
+cd me3720_25_lab0
+'''
+
+And finally launch VSCode:
+'''
+code .
+'''
